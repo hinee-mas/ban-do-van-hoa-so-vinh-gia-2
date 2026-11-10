@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bản đồ văn hoá số Vĩnh Gia 2</title>
+<meta name="description" content="Bản đồ văn hoá số của Trường TH&THCS Vĩnh Gia 2: bốn trụ sở, một mái nhà chung, ngàn câu chuyện văn hoá.">
+<link rel="icon" href="assets/img/logo-truong.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Lora:ital,wght@0,600;0,700;1,500&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header><div class="ban-top"><div class="in bt">
+<div class="lg"><img src="assets/img/logo-truong.png" alt="Logo Trường Tiểu học và Trung học cơ sở Vĩnh Gia 2"></div>
+<div class="tt"><p class="kick"><span class="nw">UỶ BAN NHÂN DÂN</span> <span class="nw">XÃ VĨNH GIA</span></p><p class="kick2"><span class="nw">TRƯỜNG TH&amp;THCS</span> <span class="nw">VĨNH GIA 2</span></p><h1><span class="nw">Bản đồ văn hoá số</span> <span class="nw">Vĩnh Gia 2</span></h1><p class="slogan"><span class="nw">Bốn điểm trường –</span> <span class="nw">Một mái nhà chung –</span> <span class="nw">Ngàn câu chuyện văn hoá</span></p></div>
+<div class="lg" id="logoDoan"><img src="assets/img/logo-doan.png" alt="Logo Đoàn Thanh niên Cộng sản Hồ Chí Minh"></div></div></div>
+<div class="in"><p class="lead">Mỗi lớp đặt thêm một dấu chân lên bản đồ. Qua từng năm học, bản đồ dày lên bằng chính câu chuyện của thầy cô và học sinh.</p>
+<div class="mapwrap"><svg id="home" class="map" viewBox="0 0 400 300" role="group" aria-label="Bản đồ bốn trụ sở"></svg>
+<div id="pin" aria-live="polite"></div></div>
+<p class="hint" id="homenote" style="margin-top:6px"></p>
+</div></header>
+<div class="in"><p class="hint" style="text-align:center;margin:14px 0 0">Chọn một mục bên dưới để mở danh sách các phần bên trong</p><nav id="nav" aria-label="Các mục"></nav></div>
+<main><div class="in">
+<div class="ban" id="ban" hidden></div>
+<section id="s-khong-gian"><h2>Vùng đất và mái trường</h2><div id="blocks"></div></section>
+<section id="s-hanh-trinh" hidden><h2>Hành trình khám phá</h2><p class="hint">Bảy chặng, mỗi chặng có một nhiệm vụ, một câu hỏi nhỏ và nơi gửi sản phẩm. Dùng nguồn chính thống, ghi rõ nguồn, không đăng thông tin riêng tư.</p><div id="themes" style="margin-top:14px"></div></section>
+<section id="s-sang-tao" hidden>
+<h2>Sáng tạo cùng các lớp</h2>
+<h3 id="sang-tao-thu-thach">Sáu thử thách</h3><div class="grid" id="chal" style="margin-bottom:18px"></div>
+<h3 id="sang-tao-ho-chieu">Hộ chiếu văn hoá của các lớp</h3><div class="grid" id="clist"></div>
+
+<div id="sang-tao-gui"></div><div class="card" id="sform"><h3>Gửi sản phẩm</h3><p class="hint">Giáo viên hướng dẫn học sinh gửi sản phẩm qua biểu mẫu của nhà trường. Ban quản trị duyệt trước khi đưa lên bản đồ. Không đăng số điện thoại, địa chỉ riêng hay thông tin nhạy cảm; chỉ dùng hình ảnh, tư liệu được phép.</p><a class="btn" id="guilink" href="#" target="_blank" rel="noopener">Mở biểu mẫu gửi sản phẩm</a><p class="hint" id="fm"></p></div>
+<h3 id="sang-tao-thu-vien">Thư viện sản phẩm</h3>
+<div class="two" style="margin-bottom:8px"><select id="gl" aria-label="Lọc lớp"></select><select id="gc" aria-label="Lọc thử thách"></select><select id="gy" aria-label="Lọc năm học"></select><input id="gq" placeholder="Tìm theo tên, nội dung" aria-label="Tìm kiếm"></div>
+<div class="grid" id="gal"></div>
+</section>
+<section id="s-tru-so" hidden><div id="sites"></div></section>
+<section id="s-vinh-danh" hidden><h2>Vinh danh đại sứ văn hoá số</h2>
+<p class="hint">Xếp theo điểm do ban quản trị chấm trên 5 tiêu chí, mỗi tiêu chí 10 điểm. Không dùng lượt thích làm tiêu chí. Mỗi huy hiệu là một con dấu trong hộ chiếu của lớp.</p>
+<div id="rank"></div></section>
+</div></main>
+<footer><div class="in">Bản đồ lớn lên cùng mỗi năm học: sản phẩm được xếp theo năm học, trụ sở và chủ đề, nên có thể thêm lớp, thêm trạm và thêm câu chuyện mà không phải làm lại từ đầu.</div></footer>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
