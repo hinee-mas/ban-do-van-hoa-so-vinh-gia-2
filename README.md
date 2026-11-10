@@ -17,7 +17,7 @@ scripts/quan_ly.py    Thêm lớp, thêm sản phẩm, kiểm tra dữ liệu
 
 ## Chạy thử trên máy
 
-M�� thư mục trong terminal rồi chạy `python3 -m http.server 8000`, sau đó vào http://localhost:8000. Không mở trực tiếp `index.html` bằng nháy đúp vì trình duyệt chặn đọc tệp JSON.
+Mở thư mục trong terminal rồi chạy `python3 -m http.server 8000`, sau đó vào http://localhost:8000. Không mở trực tiếp `index.html` bằng nháy đúp vì trình duyệt chặn đọc tệp JSON.
 
 ## Đưa lên GitHub Pages
 
@@ -25,7 +25,7 @@ M�� thư mục trong terminal rồi chạy `python3 -m http.server 8000`, sau đ
 2. Vào **Settings → Pages**, phần *Build and deployment* chọn **Deploy from a branch**, nhánh `main`, thư mục `/ (root)`, bấm Save.
 3. Sau ít phút trang chạy tại `https://<tên-tài-khoản>.github.io/<tên-kho>/`.
 
-M��i lần sửa tệp trong `data/` rồi commit, trang tự cập nhật.
+Mỗi lần sửa tệp trong `data/` rồi commit, trang tự cập nhật.
 
 ## Cập nhật dữ liệu
 
@@ -42,3 +42,14 @@ M��i lần sửa tệp trong `data/` rồi commit, trang tự cập nhật.
 - Chỉ đăng ảnh, video, bài viết do nhà trường tạo ra hoặc được phép sử dụng; ghi rõ nguồn tư liệu.
 - Không đăng thông tin cá nhân của học sinh (số điện thoại, địa chỉ riêng); cần sự đồng ý của phụ huynh khi đăng hình ảnh học sinh.
 - Logo trường và logo Đoàn thuộc quyền sử dụng của đơn vị sở hữu; đây là sơ đồ minh hoạ, không theo tỉ lệ địa lý.
+
+## Nối với Google Sheet (quản lý không cần sửa JSON)
+
+Khi `formUrl` (hoặc `apiUrl`) trong `data/config.json` là đường dẫn Apps Script `.../exec`, trang tự đọc dữ liệu từ Google Sheet:
+
+- Trang `Lop`: danh sách lớp (tên lớp, GVCN, trụ sở `tc/vt/ph/np`, khẩu hiệu).
+- Trang `TruSo`: vĩ độ, kinh độ, giới thiệu, đường dẫn ảnh của 4 trụ sở.
+- Trang `NoiDung`: nội dung mục "Vùng đất và mái trường".
+- Trang `SanPham`: sản phẩm học sinh gửi. Đổi cột *Trạng thái* thành `Đã duyệt`, nhập *Điểm*, rồi chọn menu **Bản đồ văn hoá số → Công khai tệp** để sản phẩm hiện lên bản đồ (chờ khoảng 1 phút).
+
+Nếu Sheet không đọc được, trang dùng dữ liệu trong thư mục `data/`.
